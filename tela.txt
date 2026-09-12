@@ -1,2 +1,5 @@
 tela_x = 1920
 tela_y = 1080
+escala = 10
+botaoaltura = 1500
+botaolargura = 3000
