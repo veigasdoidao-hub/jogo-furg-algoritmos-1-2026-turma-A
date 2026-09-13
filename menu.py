@@ -4,7 +4,7 @@ import mira_e_atira
 tela_x, tela_y,botao_largura,botao_altura,escala = configurações.config()
 botao_largura = botao_largura/escala
 botao_altura = botao_altura/escala
-botao_path,botao_path2,botao_path3,botao_ani1,botao_ani2,botao_ani3 = configurações.paths()
+botao_path,botao_path2,botao_path3,botao_ani1,botao_ani2,botao_ani3,botao_ani4 = configurações.paths()
 
 
 tela = aroeira.Tela("PEEGLE", altura=tela_y, largura=tela_x)
@@ -26,11 +26,11 @@ def clicar(ponto):
         quit()
     elif opcao_hitbox(ponto,placeholder_botão3):
         quit()
-quadros_botao_jogar = [botao_ani1, botao_ani2, botao_ani3]
+quadros_botao_jogar = [botao_ani1, botao_ani2, botao_ani3, botao_ani4]
 sobre_botao_jogar = False
 quadro_atual = 0
 contagem_quadro = 0
-intervalo_troca_quadro = 20 
+intervalo_troca_quadro = 2
 
 
 def selecionar(ponto):
@@ -46,10 +46,12 @@ def animar():
     global quadro_atual, contagem_quadro
     if not sobre_botao_jogar:
         return
+    if quadro_atual >= len(quadros_botao_jogar) - 1:
+        return
     contagem_quadro += 1
     if contagem_quadro >= intervalo_troca_quadro:
         contagem_quadro = 0
-        quadro_atual = (quadro_atual + 1) % len(quadros_botao_jogar)
+        quadro_atual += 1
         bota1.caminho = quadros_botao_jogar[quadro_atual]
 
 
