@@ -4,6 +4,7 @@ def jogar(tela):
     import math as mat
     import configurações 
     #tela
+
     #(fazer resoluções selecionaveis no menu e linkar aqui)
     tela_x,tela_y,a,b,c= configurações.config()
     

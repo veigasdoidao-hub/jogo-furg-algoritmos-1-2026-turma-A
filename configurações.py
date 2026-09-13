@@ -22,4 +22,7 @@ def paths():
     botao1 = os.path.join(diretorio, r"graficos\botaojogar.jpg")
     botao2 = os.path.join(diretorio, r"graficos\botaosair.jpg")
     botao3 = os.path.join(diretorio, r"graficos\botaoperfil.jpg")
-    return botao1,botao2,botao3
+    botaoANI1 = os.path.join(diretorio, r"graficos\botaojogar1.jpg")
+    botaoANI2 = os.path.join(diretorio, r"graficos\botaojogar2.jpg")
+    botaoANI3 = os.path.join(diretorio, r"graficos\botaojogar3.jpg")
+    return botao1,botao2,botao3,botaoANI1,botaoANI2,botaoANI3
