@@ -5,14 +5,19 @@ tela_x, tela_y,botao_largura,botao_altura,escala = configurações.config()
 botao_largura = botao_largura/escala
 botao_altura = botao_altura/escala
 botao_jogar, botao_sair, botao_perfil, quadros_botao_jogar, quadros_botao_sair, quadros_botao_perfil = configurações.paths()
-
-
+sobre_botao_jogar = False
+sobre_botao_sair = False
+sobre_botao_perfil = False
+quadro_atual_jogar = 0
+quadro_atual_sair = 0
+quadro_atual_perfil = 0
+contagem_quadro_jogar = 0
+contagem_quadro_sair = 0
+contagem_quadro_perfil = 0
+intervalo_troca_quadro = 2  
 tela = aroeira.Tela("PEEGLE", altura=tela_y, largura=tela_x)
-
 def opcao_hitbox(ponto, botao):
     return (botao.origem.x <= ponto.x <= botao.origem.x + botao.largura and botao.origem.y <= ponto.y <= botao.origem.y + botao.altura)
-
-
 def clicar(ponto):
     
     if opcao_hitbox(ponto, placeholder_botão):
@@ -26,21 +31,6 @@ def clicar(ponto):
         quit()
     elif opcao_hitbox(ponto,placeholder_botão3):
         quit()
-
-sobre_botao_jogar = False
-sobre_botao_sair = False
-sobre_botao_perfil = False
-
-quadro_atual_jogar = 0
-quadro_atual_sair = 0
-quadro_atual_perfil = 0
-
-contagem_quadro_jogar = 0
-contagem_quadro_sair = 0
-contagem_quadro_perfil = 0
-
-intervalo_troca_quadro = 2  
-
 
 def selecionar(ponto):
     global sobre_botao_jogar, quadro_atual_jogar, contagem_quadro_jogar
@@ -100,8 +90,8 @@ def animar():
 def pre_carregar_imagens():
     todos_os_caminhos = ([botao_jogar, botao_sair, botao_perfil] + quadros_botao_jogar + quadros_botao_sair + quadros_botao_perfil)
     for caminho in todos_os_caminhos:
-        escondida = aroeira.Imagem(aroeira.Ponto(0, 0), caminho)
-        escondida.visivel = False
+        escondida = aroeira.Imagem(aroeira.Ponto(-10000, 0), caminho)
+        escondida.visivel = True
         tela.adicionar(escondida)
 
 
@@ -114,11 +104,11 @@ placeholder_botão3 = aroeira.Retangulo(origem=(aroeira.Ponto(((tela_x/2)-(botao
 placeholder_background = aroeira.Retangulo(origem=(aroeira.Ponto(00,00)),largura=tela_x,altura=tela_y)
 
 pre_carregar_imagens()
-
 tela.adicionar(placeholder_background)
 tela.adicionar(bota1)
 tela.adicionar(bota2)
 tela.adicionar(bota3)
+
 
 tela.ao_clicar(clicar)
 tela.ao_mover_mouse(selecionar)
