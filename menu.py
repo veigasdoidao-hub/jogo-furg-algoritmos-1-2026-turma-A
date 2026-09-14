@@ -26,7 +26,7 @@ def clicar(ponto):
         tela.remover(bota3)
         tela.remover(placeholder_background)
         tela.ao_clicar(None)
-        mira_e_atira.jogar(tela)
+        mira_e_atira.Jogo.jogar(tela)
     elif  opcao_hitbox(ponto, placeholder_botão2):
         quit()
     elif opcao_hitbox(ponto,placeholder_botão3):
