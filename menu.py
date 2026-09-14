@@ -16,6 +16,7 @@ contagem_quadro_sair = 0
 contagem_quadro_perfil = 0
 intervalo_troca_quadro = 2  
 tela = aroeira.Tela("PEEGLE", altura=tela_y, largura=tela_x)
+#FUNÇÃO QUE DETECTA A HITBOX DO BOTÃO
 def opcao_hitbox(ponto, botao):
     return (botao.origem.x <= ponto.x <= botao.origem.x + botao.largura and botao.origem.y <= ponto.y <= botao.origem.y + botao.altura)
 def clicar(ponto):
@@ -26,7 +27,7 @@ def clicar(ponto):
         tela.remover(bota3)
         tela.remover(placeholder_background)
         tela.ao_clicar(None)
-        mira_e_atira.jogar(tela)
+        mira_e_atira.Jogo.jogar(tela)
     elif  opcao_hitbox(ponto, placeholder_botão2):
         quit()
     elif opcao_hitbox(ponto,placeholder_botão3):
@@ -88,7 +89,7 @@ def animar():
             quadro_atual_perfil += 1
             bota3.caminho = quadros_botao_perfil[quadro_atual_perfil]
 def pre_carregar_imagens():
-    todos_os_caminhos = ([botao_jogar, botao_sair, botao_perfil] + quadros_botao_jogar + quadros_botao_sair + quadros_botao_perfil)
+    todos_os_caminhos = (quadros_botao_jogar + quadros_botao_sair + quadros_botao_perfil)
     for caminho in todos_os_caminhos:
         escondida = aroeira.Imagem(aroeira.Ponto(-10000, 0), caminho)
         escondida.visivel = True
