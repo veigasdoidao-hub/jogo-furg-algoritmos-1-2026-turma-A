@@ -22,8 +22,23 @@ def paths():
     botao1 = os.path.join(diretorio, r"graficos\botaojogar.jpg")
     botao2 = os.path.join(diretorio, r"graficos\botaosair.jpg")
     botao3 = os.path.join(diretorio, r"graficos\botaoperfil.jpg")
+
     botaoANI1 = os.path.join(diretorio, r"graficos\botaojogar.jpg")
     botaoANI2 = os.path.join(diretorio, r"graficos\botaojogar2.jpg")
     botaoANI3 = os.path.join(diretorio, r"graficos\botaojogar3.jpg")
     botaoANI4 = os.path.join(diretorio, r"graficos\botaojogar4.jpg")
-    return botao1,botao2,botao3,botaoANI1,botaoANI2,botaoANI3,botaoANI4
+    quadros_jogar = [botaoANI1, botaoANI2, botaoANI3, botaoANI4]
+
+    botaoSairANI1 = os.path.join(diretorio, r"graficos\botaosair.jpg")
+    botaoSairANI2 = os.path.join(diretorio, r"graficos\botaosair2.jpg")
+    botaoSairANI3 = os.path.join(diretorio, r"graficos\botaosair3.jpg")
+    botaoSairANI4 = os.path.join(diretorio, r"graficos\botaosair4.jpg")
+    quadros_sair = [botaoSairANI1, botaoSairANI2, botaoSairANI3, botaoSairANI4]
+
+    botaoPerfilANI1 = os.path.join(diretorio, r"graficos\botaoperfil.jpg")
+    botaoPerfilANI2 = os.path.join(diretorio, r"graficos\botaoperfil2.jpg")
+    botaoPerfilANI3 = os.path.join(diretorio, r"graficos\botaoperfil3.jpg")
+    botaoPerfilANI4 = os.path.join(diretorio, r"graficos\botaoperfil4.jpg")
+    quadros_perfil = [botaoPerfilANI1, botaoPerfilANI2, botaoPerfilANI3, botaoPerfilANI4]
+
+    return botao1, botao2, botao3, quadros_jogar, quadros_sair, quadros_perfil
