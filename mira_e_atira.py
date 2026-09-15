@@ -37,7 +37,7 @@ class Jogo:
             if len(projeteis) == 0:
                 atualizar_angulo()
         velocidade_projetil = 8
-        gravidade = 0.2
+        gravidade = 0.1
         velocidade_x = 0
         velocidade_y = 0
         projeteis = []
