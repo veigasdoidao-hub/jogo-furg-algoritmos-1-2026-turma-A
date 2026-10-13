@@ -1,0 +1,20 @@
+PEGKING (versao Pyxel)
+
+Requisitos: Windows e Python 3.10 ou mais novo (marque "Add Python to PATH" ao instalar).
+
+JOGAR SEM CRIAR EXECUTAVEL
+  1. Abra um terminal nesta pasta
+  2. pip install pyxel
+  3. python menu.py
+
+CRIAR O Pegking.exe
+  Dois cliques em instalador.bat (ou: python instalador.py)
+  Resultado: pasta dist/ com Pegking.exe (e niveis/ se ja existir).
+  Para entregar o jogo, copie a pasta dist/ inteira.
+
+CONTROLES
+  Mouse: mirar e clicar para atirar / clicar nos botoes
+  R: reinicia a fase     Esc: volta     Alt+Enter: tela cheia
+
+A pasta niveis/ (fases) e o perfis.json (jogadores) sao criados sozinhos
+ao lado do jogo. As fases do jogo anterior (Aroeira) funcionam sem mudanca.

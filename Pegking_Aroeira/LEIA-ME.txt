@@ -1,0 +1,16 @@
+PEGKING
+
+Requisitos: Windows e Python 3.10 ou mais novo (marque "Add Python to PATH" ao instalar).
+
+JOGAR SEM CRIAR EXECUTAVEL
+  1. Abra um terminal nesta pasta
+  2. pip install flet
+  3. python menu.py
+
+CRIAR O Pegking.exe
+  Dois cliques em instalador.bat (ou: python instalador.py)
+  Resultado: pasta dist/ com Pegking.exe, tela.txt e niveis/
+  Para entregar o jogo, copie a pasta dist/ inteira.
+
+A pasta niveis/ (fases) e o perfis.json (jogadores) sao criados sozinhos.
+Para mudar a resolucao, edite o tela.txt.
